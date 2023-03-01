@@ -1,27 +1,26 @@
 .main-1{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+
 }
 button{
     width: 200px;
     height: 50px;
-    justify-self: end;
     background-color: black;
     color: white;
+    justify-self: end;
 }
 .main-1 > h2{
     font-size: 35px;
     font-family: cursive;
     font-weight: bold;
+    justify-self: start;
 }
 
 .main-2{
-    
     display: grid;
 
     grid-template-columns: repeat(3,1fr);
-
-    justify-content:space-between;
 }
 .m-2{
     background-color:rgb(206, 201, 201);
@@ -29,18 +28,22 @@ button{
     color: rgb(130, 124, 124);
     border-radius: 20px;
     max-width: 100%;
+    
 }
 .m-2 > h3{
     background-color:rgb(206, 201, 201);
     color: black;
-    justify-self: end;
+
 }
 .m-2 > h2{
     background-color:rgb(206, 201, 201);
     color: black;
+    justify-self: start;
+
 }
 .m-2 > p{
     background-color:rgb(206, 201, 201);
+
 }
 
 .m-2:hover{

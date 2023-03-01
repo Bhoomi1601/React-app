@@ -20,7 +20,7 @@ From savory appetizers to mouth-watering entrees,
 </div>
 
 <div>
-  <img src={require("./assets/images/home.jpg")} alt="home"/>
+  <img src={require("./assets/images/home.jpg")} alt="home" id="home"/>
   </div>
 </section>
       </header>

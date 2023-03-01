@@ -1,3 +1,8 @@
+nav{
+    background-color: rgba(242, 153, 153, 0.762);
+}
+
+
 .Nav-tag{
     display: inline-grid;
     grid-template-columns:repeat(6,1fr) ;

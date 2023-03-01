@@ -1,40 +1,16 @@
-/* section{
-    display: flex;
-    flex-flow: row ;
-    justify-content: space-evenly;
-}
-
-div > img{
-    width: 100%;
-    height: auto;
-}
-
-div > h1{
-    font-size: 40px;
-    font-weight: bolder;
-    color: rgb(116, 22, 22);
-}
-div > h2{
-    font-size: 30px;
-    font-weight: bold;
-    color: rgb(165, 57, 57);
-}
-
-div > p{
-    display: inline-block;
-} */
-
 
 section{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    justify-content: space-evenly;
+    justify-items: center;
 
 }
 
 div > img{
-    max-width: 100%;
-    height: auto;
+   
+        width: 100%;
+        height: auto;
+
 }
 
 div > h1{
@@ -51,3 +27,11 @@ div > h2{
 div >p{
     font-size: 20px;
 }
+
+
+/* @media only screen and (max-width: 900px) {
+    div.home {
+      width: 100vw;
+      height: 50vh;
+    }
+  } */

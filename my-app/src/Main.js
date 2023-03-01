@@ -6,7 +6,7 @@ function Main(){
     <section className="main-1">
     <h2>Todays's Special</h2>
 
-    <button>Order Online</button>
+    <button className="btn-1">Order Online</button>
     </section>
     <section className="main-2">
         <section className="m-2">
@@ -22,16 +22,14 @@ function Main(){
         <h3>$9.00</h3>
         <p>Rasmalai is a popular dessert in the Indian subcontinent. 
             It is made by soaking flattened balls of chenna (a type of fresh cheese made from milk) in a sweet, flavored syrup. 
-            The cheese balls are typically made by curdling milk and then separating the solid curds from the liquid whey.
+           
            </p>
         </section>
         <section className="m-2">
         <h2>Idli</h2>
         <h3>$10.00</h3>
         <p>Idli is a popular South Indian dish that is typically eaten for breakfast or as a snack. 
-            It is a savory steamed cake made from a batter of fermented black lentils and rice.
-To make idli, the black lentils and rice are first soaked separately in water for several hours. 
-Then they are ground together into a smooth batter and allowed to ferment overnight. 
+            It is a savory steamed cake made from a batter of fermented black lentils and rice
             </p>
         </section>
     </section>
