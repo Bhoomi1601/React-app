@@ -1,15 +1,16 @@
+import "./Nav.css"
 function Nav(){
     return(
 <>
-<nav>
+<nav className="nav-main">
     <img src={require("./assets/images/logo.webp")} alt="logo" height={100} />
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Reservation</a></li>
-        <li><a href="#">Order Online</a></li>
-        <li><a href="#">Login</a></li>
+    <ul className="Nav-tag">
+        <li className="main-li"><a href="#" className="main-a">Home</a></li>
+        <li className="main-li"><a href="#" className="main-a">About</a></li>
+        <li className="main-li"><a href="#" className="main-a">Menu</a></li>
+        <li className="main-li"><a href="#" className="main-a">Reservation</a></li>
+        <li className="main-li"><a href="#" className="main-a">Order Online  </a></li>
+        <li className="main-li"><a href="#" className="main-a">Login</a></li>
 
 
     </ul>
