@@ -3,8 +3,6 @@ function Nav(){
     return(
 <>
 <nav className="nav-main">
-    
-   
     <ul className="Nav-tag">
     <img src={require("./assets/images/logo.webp")} alt="logo" height={100} id="logo"/>
 

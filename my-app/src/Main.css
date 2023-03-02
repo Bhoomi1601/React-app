@@ -3,7 +3,7 @@
     grid-template-columns: repeat(2,1fr);
 
 }
-button{
+.btn-1{
     width: 200px;
     height: 50px;
     background-color: black;
@@ -24,7 +24,7 @@ button{
 }
 .m-2{
     background-color:rgb(206, 201, 201);
-    border: 1px solid black;
+    border: 0 solid;
     color: rgb(130, 124, 124);
     border-radius: 20px;
     max-width: 100%;

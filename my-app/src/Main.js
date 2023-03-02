@@ -2,7 +2,7 @@ import "./Main.css"
 function Main(){
     return(
 <>
-<main>
+<main id="main-id">
     <section className="main-1">
     <h2>Todays's Special</h2>
 

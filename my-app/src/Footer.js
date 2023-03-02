@@ -15,7 +15,6 @@ function Footer(){
         <li className="foot-li"><a href="#" className="foot-a">About</a></li>
         <li className="foot-li"><a href="#" className="foot-a">Menu</a></li>
         <li className="foot-li"><a href="#" className="foot-a">Reservation</a></li>
-        <li className="foot-li"><a href="#" className="foot-a">Order Online  </a></li>
         <li className="foot-li"><a href="#" className="foot-a">Login</a></li>
 
 
