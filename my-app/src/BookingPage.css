@@ -1,0 +1,12 @@
+#book-page{
+    display: grid;
+}
+#book-pageh1{
+    justify-self: center;
+}
+#book-pagep1{
+    justify-self: center;
+}
+#book-pagep2{
+    justify-self: center;
+}

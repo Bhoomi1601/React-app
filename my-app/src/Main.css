@@ -1,3 +1,12 @@
+
+.main-li{
+    list-style: none;
+}
+
+
+
+
+
 .main-1{
     display: grid;
     grid-template-columns: repeat(2,1fr);

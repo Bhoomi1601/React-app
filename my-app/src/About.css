@@ -1,3 +1,23 @@
 .sec-abt{
-    display: grid;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#article-abt1{
+    justify-self:start;
+}
+#abt-head{
+    font-size: 40px;
+    font-family:'Franklin Gothic Medium';
+    font-weight: bolder;
+    color: rgb(116, 22, 22);
+}
+#abt-h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(97, 6, 6, 0.764);
+    
+}
+#abt-para{
+    font-size: 25px;
+    color: rgba(113, 5, 5, 0.692);
 }

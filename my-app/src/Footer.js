@@ -1,6 +1,6 @@
 import { FaFacebook,FaTwitter,FaLinkedinIn } from 'react-icons/fa';
 import "./Footer.css"
-
+import { Link } from 'react-router-dom';
 function Footer(){
     return(
 <>
@@ -11,11 +11,11 @@ function Footer(){
             </div>
             <div className="foot-2">
             <ul className="foot-tag">
-        <li className="foot-li"><a href="#" className="foot-a">Home</a></li>
-        <li className="foot-li"><a href="#" className="foot-a">About</a></li>
-        <li className="foot-li"><a href="#" className="foot-a">Menu</a></li>
-        <li className="foot-li"><a href="#" className="foot-a">Reservation</a></li>
-        <li className="foot-li"><a href="#" className="foot-a">Login</a></li>
+        <li className="main-li"><Link to="/" className="main-a" >Home</Link></li>
+        <li className="main-li"><a href="#about" className="main-a" >About</a></li>
+        <li className="main-li"><a href="#main-id" className="main-a" >Menu</a></li>
+        <li className="main-li"><Link to="/bookingpage" className="main-a" >BookingPage</Link></li>
+        <li className="main-li"><Link to="/login" className="main-a" >Login</Link></li>
 
 
     </ul>
