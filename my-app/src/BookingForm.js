@@ -1,7 +1,8 @@
 import { useState } from "react";
 // import moment from 'moment';
-import "./Nav.css";
-import "./BookingForm.css"
+import "./assets/css/Nav.css";
+
+import "./assets/css/BookingForm.css";
 import { Link } from "react-router-dom";
 
 
@@ -107,9 +108,8 @@ function BookingForm(props) {
 
                     <fieldset>
                         <label htmlFor="res-date">Date:
-                            <input id="res-date" type="date" name="res-date"
-                                value={date} onChange={handleTheDateChange}
-                                required />
+                            <input id="res-date" type="date" name="res-date" required
+                                value={date} onChange={handleTheDateChange} />
                         </label>
                         {/* {!isDateValid && <div style={{
           fontWeight: 'bold',

@@ -1,6 +1,6 @@
 
 import Nav from "./Nav";
-import  "./AppMain.css";
+import "./assets/css/AppMain.css";
 import Login from "./Login"
 import { Route,Routes } from "react-router-dom";
 import BookingPage from "./BookingPage";

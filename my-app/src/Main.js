@@ -1,4 +1,4 @@
-import "./Main.css";
+import "./assets/css/Main.css";
 
 function Main(){
     return(

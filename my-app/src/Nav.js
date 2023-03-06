@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Nav.css";
+import "./assets/css/Nav.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import Main from "./Main";

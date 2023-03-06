@@ -1,9 +1,10 @@
 import React,{ useReducer }  from 'react';
 import BookingForm from './BookingForm';
-import "./Nav.css";
+import "./assets/css/Nav.css";
+
 import { Link} from 'react-router-dom';
-import "./BookingPage.css";
-import "./Nav.css";
+import "./assets/css/BookingPage.css";
+
 import { fetchAPI } from './bookingApi';
 // import BookingForm from './BookingForm';
 function BookingPage() {
