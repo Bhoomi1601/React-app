@@ -1,58 +1,73 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import moment from 'moment';
+// import moment from 'moment';
 import "./Nav.css";
-import "./Reserve.css"
+import "./BookingForm.css"
+import { Link } from "react-router-dom";
+
 
 function validateMobileNumber(phone) {
     const regex = /^(\+?\d{1,3}[- ]?)?\d{10}$/;
     return regex.test(phone);
-  }
+}
 
 
-function BookingForm() {
+function BookingForm(props) {
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [isValid, setIsValid] = useState(true);
     const [date, setDate] = useState("");
-    const [isDateValid, setIsDateValid] = useState(true);
+    // const [isDateValid, setIsDateValid] = useState(true);
     const [time, setTime] = useState("");
-    const [availableTimes, setavailableTimes] = useState([
-        '10:00 AM',
-        '2:00 PM',
-        '3:00 PM',
-        '4:00 PM',
-    ]);
-    const [guest,setGuest] =useState("");
-    const [occasion,setOccasion]= useState("");
-        
+    const [guest, setGuest] = useState("");
+    const [occasion, setOccasion] = useState("");
+
+    const [finalTime, setFinalTime] = useState(
+        props.availableTimes.map((times) => <option key={times}>{times}</option>)
+    );
+
+    function handleTheDateChange(e) {
+        setDate(e.target.value);
+
+        var stringify = e.target.value;
+        const date = new Date(stringify);
+
+
+        props.updateTimes(date);
+
+        setFinalTime(props.availableTimes.map((times) => <option key={times}>{times}</option>));
+    }
 
 
 
 
-    function handleDateChange(e) {
-        const value = e.target.value;
-        setDate(value);
-        setIsDateValid(moment(value).isSameOrAfter(moment(), 'day'));
-      }
-    
+
+    // function handleDateChange(e) {
+    //     const value = e.target.value;
+    //     setDate(value);
+    //     setIsDateValid(moment(value).isSameOrAfter(moment(), 'day'));
+    //   }
+
+    //   function handleDate(){
+    //     handleDateChange();
+    //     handleTheDateChange();
+    //   }
 
 
     function handlePhone(e) {
         const value = e.target.value;
         setPhone(value);
         setIsValid(validateMobileNumber(value));
-      }
+    }
 
 
 
-    const isFormValid=()=>{
-        return(
-            name && validateMobileNumber(phone) && isDateValid && time && occasion && guest 
+    const isFormValid = () => {
+        return (
+            name && validateMobileNumber(phone) && occasion && guest
         )
     }
 
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setName("");
@@ -79,42 +94,34 @@ function BookingForm() {
 
                     <fieldset>
                         <label htmlFor="phone">Enter Phone Number:
-                            <input id="phone" type="tel" name="phone" placeholder="Enter phone no"
+                            <input id="phone" type="tel" name="phone" placeholder="(xxx)-xxx-xxxx"
                                 value={phone} onChange={handlePhone}
                             />
                         </label>
                         {!isValid && <div style={{
-          fontWeight: 'bold',
-          color: 'red',
-        }}>Please enter a valid mobile number.</div>}
+                            fontWeight: 'bold',
+                            color: 'red',
+                        }}>Please enter a valid mobile number.</div>}
                     </fieldset>
 
 
                     <fieldset>
                         <label htmlFor="res-date">Date:
                             <input id="res-date" type="date" name="res-date"
-                                value={date} onChange={handleDateChange}
-                            />
+                                value={date} onChange={handleTheDateChange}
+                                required />
                         </label>
-                        {!isDateValid && <div style={{
+                        {/* {!isDateValid && <div style={{
           fontWeight: 'bold',
           color: 'red',
-        }} >Please enter a valid future date.</div>}
+        }} >Please enter a valid future date.</div>} */}
                     </fieldset>
                     <fieldset>
-                        <label htmlFor="res-time">Choose Time: 
-                            <select value={time} id="res-time" onChange={(e) => setTime(e.target.value)}>
-                                {/* <option>17:00</option>
-                                <option>18:00</option>
-                                <option>19:00</option>
-                                <option>20:00</option>
-                                <option>21:00</option>
-                                <option>22:00</option> */}
-                                {availableTimes.map((availableTimes)=>(
-                                    <option>{availableTimes}</option>
-                                ))}
+                        <label htmlFor="res-time">Choose Time:
+                            <select id="res-time" required>
+                                {finalTime}
                             </select>
-                            </label>
+                        </label>
 
                     </fieldset>
                     <fieldset>
@@ -128,17 +135,36 @@ function BookingForm() {
 
                     <fieldset>
                         <label htmlFor="event">Occasion:
-                            <select id="event" value={occasion} onChange={(e)=>setOccasion(e.target.value)}>
+                            <select id="event" value={occasion} onChange={(e) => setOccasion(e.target.value)}>
+                                <option selected>None</option>
                                 <option>Birthday</option>
+                                <option>Engagement</option>
                                 <option>Anniversary</option>
 
                             </select>
                         </label>
                     </fieldset>
 
+                    <fieldset>
+                    <small>
+          <p style={{
+          fontWeight: 'bold',
+          color: 'red',
+        }}>
+            Note: You cannot edit your reservation after submission. 
+            <br></br>
+            Please double-check your answer before submitting your reservation request.
+          </p>
+        </small>
+        </fieldset>
+                    <fieldset>
 
-                    <button disabled={!isFormValid()} type="Submit" className="update">Submit</button>
+            <Link to="/confirmation">
+                    <button disabled={!isFormValid()} type="Submit" className="update">Book Table</button>
+                </Link>
+                    </fieldset>
                 </form>
+
             </div>
         </>
     )

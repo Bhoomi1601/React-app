@@ -7,7 +7,7 @@ function Main(){
     <section className="main-1">
     <h2>Todays's Special</h2>
 
-    <button className="btn-1">Order Online</button>
+    <button className="btn-1">Online Menu</button>
     </section>
     <section className="main-2">
         <section className="m-2">

@@ -1,0 +1,24 @@
+/* .confirmation-header{
+    display: grid;
+} */
+.reserve-header-text{
+justify-content: start;
+align-content: start;
+
+}
+#c-h1{
+    justify-self: start;
+text-align: start;
+color: rgba(17, 17, 118, 0.881);
+
+}
+#c-h2{
+    justify-self: start;
+    color: rgba(17, 17, 118, 0.881);
+}
+
+#c-l1{
+    justify-self: start;
+    font-size: 20px;
+    color: rgba(222, 33, 33, 0.868);
+}

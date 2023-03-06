@@ -4,7 +4,7 @@ import  "./AppMain.css";
 import Login from "./Login"
 import { Route,Routes } from "react-router-dom";
 import BookingPage from "./BookingPage";
-
+import Confirmation from "./Confirmation";
 function AppMain() {
   return (
     <div className="app-main">
@@ -12,6 +12,8 @@ function AppMain() {
         <Route path="/" element={<Nav/>}></Route>
           <Route path="/bookingpage" element={<BookingPage />}> </Route>
           <Route path="/login" element={<Login />}> </Route>
+          <Route path="/confirmation" element={<Confirmation />}> </Route>
+
       </Routes>
 
     </div>
